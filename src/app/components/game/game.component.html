@@ -1,0 +1,10 @@
+<app-imagen class="images" (imagenCapturada)="handleImagenCapturada($event)"></app-imagen>
+@if (!ocultarGanador) {
+  <app-winner 
+    [jugadorSelection]="jugadorSelection" 
+    [machineSelection]="machineSelection" 
+    [machineWins]="machineWins">
+  </app-winner>
+}
+
+  

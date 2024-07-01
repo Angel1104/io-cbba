@@ -1,0 +1,15 @@
+<div id="my_camera">
+  <!-- La cámara se vincula automáticamente con Webcam.attach() -->
+</div>
+@if (camVisible) {
+  <br/>
+  <button (click)="takeSnapshot()">Take Snapshot</button>
+}
+
+@if (snapshot) {
+    <img [src]="snapshot" alt="Snapshot"/>
+    <br/>
+    <div>
+      <button (click)="resetSnapshot()">Reset Snapshot</button>
+    </div>
+  }

@@ -1,0 +1,7 @@
+@if (!iniciar) {
+    <app-welcome></app-welcome>
+} @else {
+    <app-game></app-game>
+}
+<button type="button" (click)="iniciarJuego()">{{text}}</button>
+

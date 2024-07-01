@@ -1,0 +1,28 @@
+<form [formGroup]="formularioJugadores" class="container bienvenida">
+  <section class="form-preguntas-contenedor">
+    <div class="jugador">
+        <h2>Jugador 1</h2>
+        <p>Codigo de idioma: {{idiomaJugador1}}</p>
+        <label for="nombreJugador1">Nombre:</label>
+        <input type="text" id="nombreJugador1" formControlName="nombreJugador1" required>
+
+        <label for="descripcionJugador1">Descripción:</label>
+        <textarea id="descripcionJugador1" formControlName="descripcionJugador1"></textarea>
+    </div>
+
+    <!-- <div class="jugador">
+        <h2>Jugador 2</h2>
+        <p>Codigo de idioma: {{idiomaJugador2}}</p>
+        <label for="nombreJugador2">Nombre:</label>
+        <input type="text" id="nombreJugador2" formControlName="nombreJugador2" required>
+
+        <label for="descripcionJugador2">Descripción:</label>
+        <textarea id="descripcionJugador2" formControlName="descripcionJugador2"></textarea>
+    </div> -->
+  </section>
+  <section class="botones-contenedor">
+    <button type="button" (click)="obtenerIdioma()" >Obtener idioma</button>
+  </section>
+</form>
+  
+<app-test></app-test>

@@ -1,0 +1,25 @@
+@if (getWinner()) {
+    <div class="winner-message">
+        {{ getWinner() }}
+    </div>
+    @if (!machineWins) {
+        <form [formGroup]="comentarioForm" (ngSubmit)="submitComentario()">
+            <div class="mdc-text-field">
+              <input type="text" id="comentario" formControlName="comentario" class="mdc-text-field__input">
+              <div class="mdc-line-ripple"></div>
+            </div>
+            <button type="submit" class="mdc-button mdc-button--raised">Clasificar Comentario</button>
+        </form>
+
+        @if (classificationResult) {
+            <div  id="output" class="classification-result">
+                <h3>Resultado de Clasificación</h3>
+                <div class="category-item">
+                  {{ classificationResult.classifications[0].categories[0].categoryName }}
+                </div>
+            </div>
+        }
+        
+    }
+}
+
