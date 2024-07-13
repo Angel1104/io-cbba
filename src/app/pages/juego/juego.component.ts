@@ -1,14 +1,13 @@
 import { OnInit, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WebcamComponent } from '../../logic/webcam/webcam.component';
-import { WelcomeComponent } from "../../components/welcome/welcome.component";
 import { GestureRecognitionService } from '../../services/gesture-recognizer.service';
 import { PiedraPapelTijeraService } from '../../services/piedra-papel-tijera.service';
 
 @Component({
   selector: 'app-juego',
   standalone: true,
-  imports: [WelcomeComponent, WebcamComponent],
+  imports: [WebcamComponent],
   templateUrl: './juego.component.html',
   styleUrls: ['./juego.component.css']
 })
