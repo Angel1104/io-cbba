@@ -1,0 +1,17 @@
+<section class="contenedor">
+  <div id="my_camera" [style.display]="snapshot ? 'none' : 'block'">
+    <!-- La cámara se vincula automáticamente con Webcam.attach() -->
+  </div>
+  @if (camVisible) {
+    <br/>
+    <button (click)="takeSnapshot()">Take Snapshot</button>
+  }
+</section>
+
+@if (snapshot) {
+  <section class="contenedor">
+    <img [src]="snapshot" alt="Snapshot"/>
+    <br/>
+      <button (click)="resetSnapshot()">Reset Snapshot</button>
+  </section>
+  } 

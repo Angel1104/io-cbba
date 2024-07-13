@@ -1,0 +1,9 @@
+<section class="contenedor3">
+  <h1>
+    Tus vidas actuales son: {{vidas}}
+  </h1>
+  <h1>{{jugador}}</h1>
+  <section class="webcam">
+  <app-webcam  (imagenCapturada)="handleImagenCapturada($event)" (resetImagen)="handleResetImagen()"></app-webcam>
+</section>
+</section>
